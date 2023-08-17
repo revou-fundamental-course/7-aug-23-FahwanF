@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Kalkulator Segitiga by Fahwan Faishal</title>  
+    
+</head>
+<body>
+    <header>
+        <h1>Kalkulator Luas dan Keliling Segitiga</h1>
+    </header>
+    <main>
+        <img class="tengah" src="assets/Rumus Keliling Segitiga.png">
+        <h2>Keliling= sisi 1 + sisi 2 + sisi 3</h2>
+        <section class="input-section">
+         <label for="sisi1">Sisi 1 Segitiga</label>
+         <input type="number" id="sisi1"name= "sisi1"placeholder="0">
+         <label for="sisi2">Sisi 2 Segitiga</label>
+         <input type="number" id="sisi2"name= "sisi2"placeholder="0">
+         <label for="sisi3">Sisi 3 Segitiga</label>
+         <input type="number" id="sisi3"name= "sisi3"placeholder="0">
+        
+         <section>
+             <button onclick="hitungLuasKeliling()" value="keliling">Hitung Keliling Segitiga</button>
+             <button onclick="myFunction()" value="Reset form">Reset</button>
+             Keliling: <input type="text" id="keliling" name="keliling">
+         </section>
+
+         <img class="tengah" src="assets/Rumus Luas Segitiga.png">
+         <h2>Luas Segitiga= 1/2 x a x t</h2>
+        <section class="input-section">
+         <label for="tinggi">Tinggi Segitiga</label>
+         <input type="number" id="tinggi" placeholder="0">
+         <label for="alas">Alas Segitiga</label>
+         <input type="number" id="alas" placeholder="0">
+
+         <section>
+            <button id="luas" value="luas" onclick="hitungLuasKeliling();">Hitung Luas Segitiga</button>
+            <button>Reset</button>
+            Luas: <input type="text" id="luas" name="luas">
+         </section>
+
+        </section>
+        <script type="text/javascript" src="js/script.js">
+            function hitungKelilingLuasSegitiga() {
+    var Sisi1, Sisi2, Sisi3, Alas, Tinggi, Keliling, Luas;
+
+    Sisi1 = parseInt(document.getElementById("sisi1").value);
+    Sisi2 = parseInt(document.getElementById("sisi2").value);
+    Sisi3 = parseInt(document.getElementById("sisi3").value);
+    Alas = parseInt(document.getElementById("alas").value);
+    Tinggi = parseInt(document.getElementById("tinggi").value);
+    Keliling = Sisi1 + Sisi2 +Sisi3
+    Luas = 0.5 * Alas * Tinggi
+    document.getElementById("keliling").value = Keliling;
+    document.getElementById("luas").value = Luas;
+    function myFunction() {
+        document.getElementById("input1-section").reset();
+    }
+}
+        </script>     
+    </main>
+</body>
+</html>
